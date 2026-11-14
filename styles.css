@@ -744,7 +744,8 @@ footer {
 
   .menu-toggle {
     display: block;
-    margin-left: auto;
+    order: 3;
+    margin-left: 0;
   }
 
   .nav-links {
@@ -771,11 +772,37 @@ footer {
   }
 
   .nav-right {
-    display: none;
+    display: flex;
+    order: 2;
+    margin-left: auto;
+  }
+
+  .nav-right .button {
+    padding: 11px 13px;
+    font-size: 11px;
+  }
+
+  .nav {
+    gap: 12px;
+  }
+
+  .brand {
+    font-size: 22px;
   }
 
   .hero {
     padding-top: 16px;
+  }
+
+  @media (max-width: 360px) {
+    .nav {
+      gap: 8px;
+    }
+
+    .nav-right .button {
+      padding: 10px 9px;
+      font-size: 10px;
+    }
   }
 
   .hero-shell {
