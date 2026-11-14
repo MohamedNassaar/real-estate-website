@@ -1584,7 +1584,7 @@ html.js .area-card:nth-child(4).reveal {
   }
 }
 
-html.js .hero-content > * {
+html.js .hero-content>* {
   animation: hero-enter .7s both
 }
 
@@ -1605,6 +1605,7 @@ html.js .hero-caption {
 }
 
 @media(prefers-reduced-motion:reduce) {
+
   html.js .reveal,
   html.js .reveal.is-visible {
     opacity: 1;
@@ -1612,7 +1613,7 @@ html.js .hero-caption {
     transition: none
   }
 
-  html.js .hero-content > *,
+  html.js .hero-content>*,
   html.js .hero-caption {
     animation: none
   }
