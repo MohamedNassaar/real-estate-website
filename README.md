@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Helcoo Real Estate
 
 A polished, responsive, bilingual real-estate website for Helcoo, built with HTML, CSS and vanilla JavaScript. No build step or package installation is required.
@@ -63,3 +64,7 @@ The `screenshots/` folder contains `homepage.png`, `properties.png`, and `mobile
 The site uses stock photography stored in `assets/images/` and an illustrative advisor graphic rather than fabricated agent portraits. Fonts are self-hosted in `assets/fonts/`; each family includes its SIL Open Font License notice.
 
 The properties and prices are illustrative only. Before launch, replace them with verified inventory and approved photography, confirm contact and office details, add reviewed privacy and regulatory disclosures, and connect enquiries to a monitored business workflow. The contact form uses `mailto:` and does not send data to a backend. Review the MIT license attribution before publication.
+=======
+# real-estate-website
+Webaite for Helcoo
+>>>>>>> 696251cfa70e3ddd225683610b3acecad3192ca9
