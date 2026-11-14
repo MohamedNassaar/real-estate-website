@@ -50,8 +50,8 @@
 @media(max-width:650px) {
   .announcement {
     padding: 0 16px;
-    font-size: 7px;
-    letter-spacing: 1px
+    font-size: 9px;
+    letter-spacing: .8px
   }
 
   .announcement span:last-child {
@@ -81,8 +81,9 @@
     flex-direction: column;
     gap: 5px;
     order: 3;
-    width: 35px;
-    height: 35px;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
     align-items: center;
     justify-content: center;
     border: 0;
@@ -125,7 +126,9 @@
   }
 
   .nav-links a {
-    padding: 13px 0;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
     border-bottom: 1px solid #eeeae2
   }
 
@@ -134,13 +137,12 @@
   }
 
   .nav-actions {
+    gap: 8px;
     margin-left: auto
   }
 
   .nav-actions .button {
-    min-height: 38px;
-    padding: 0 12px;
-    font-size: 9px
+    display: none
   }
 
   .hero {
@@ -162,12 +164,12 @@
   }
 
   .hero h1 {
-    font-size: 59px
+    font-size: clamp(48px, 14vw, 56px)
   }
 
   .hero-copy {
     max-width: 340px;
-    font-size: 12px
+    font-size: 14px
   }
 
   .hero-actions {
@@ -181,7 +183,8 @@
     left: 25px;
     right: 25px;
     bottom: 18px;
-    font-size: 7px
+    font-size: 9px;
+    letter-spacing: .8px
   }
 
   .search-section {
@@ -204,12 +207,17 @@
     border-left: 0
   }
 
+  .field label {
+    font-size: 9px;
+    letter-spacing: .7px
+  }
+
   .field:nth-of-type(2) {
     border-left: 1px solid var(--line)
   }
 
   .field select {
-    font-size: 10px
+    font-size: 12px
   }
 
   .search-button {
@@ -222,7 +230,8 @@
     flex-wrap: wrap;
     gap: 10px 13px;
     padding: 22px 0;
-    font-size: 7px
+    font-size: 9px;
+    letter-spacing: .6px
   }
 
   .intro-strip i {
@@ -247,7 +256,8 @@
   }
 
   .section-description {
-    font-size: 11px
+    font-size: 14px;
+    line-height: 1.75
   }
 
   .results-toolbar {
@@ -271,6 +281,15 @@
     font-size: 21px
   }
 
+  .property-location {
+    font-size: 9px
+  }
+
+  .property-meta {
+    gap: 14px;
+    font-size: 11px
+  }
+
   .areas-section {
     padding: 68px 0 72px
   }
@@ -290,8 +309,8 @@
   }
 
   .area-copy small {
-    font-size: 6px;
-    letter-spacing: 1px
+    font-size: 9px;
+    letter-spacing: .5px
   }
 
   .editorial-section {
@@ -327,7 +346,8 @@
   }
 
   .contact-side p {
-    font-size: 11px
+    font-size: 14px;
+    line-height: 1.75
   }
 
   .footer-main {
@@ -342,7 +362,7 @@
   .footer-bottom {
     flex-direction: column;
     gap: 10px;
-    font-size: 7px
+    font-size: 11px
   }
 
   .property-dialog {
@@ -356,7 +376,13 @@
 
 @media(max-width:370px) {
   .hero h1 {
-    font-size: 52px
+    font-size: clamp(45px, 14vw, 50px)
+  }
+
+  .hero-caption {
+    gap: 8px;
+    font-size: 8px;
+    letter-spacing: .4px
   }
 
   .nav-actions .button {
@@ -412,9 +438,9 @@
 
 @media(max-width:650px) {
   .language-control select {
-    min-height: 36px;
-    padding: 0 6px;
-    font-size: 9px
+    min-height: 40px;
+    padding: 0 8px;
+    font-size: 11px
   }
 
   html[dir=rtl] .nav-actions {
@@ -503,6 +529,14 @@
     font-size: 38px
   }
 
+  .detail-description {
+    font-size: 14px
+  }
+
+  .detail-specs {
+    font-size: 12px
+  }
+
   .related-section {
     padding-top: 55px;
     padding-bottom: 65px
@@ -535,6 +569,25 @@
 
   .contact-form {
     padding: 25px 20px
+  }
+
+  .contact-card a,
+  .contact-card p {
+    font-size: 13px
+  }
+
+  .form-field input,
+  .form-field textarea {
+    font-size: 16px
+  }
+
+  .form-note {
+    font-size: 12px;
+    line-height: 1.6
+  }
+
+  .value-card p {
+    font-size: 13px
   }
 
   .footer-main {
