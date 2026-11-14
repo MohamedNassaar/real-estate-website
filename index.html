@@ -1,359 +1,218 @@
 <!doctype html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f1e8">
-  <meta name="description" data-i18n-content="metaDescription"
-    content="Discover considered homes and property opportunities across Dubai with Helcoo Real Estate.">
+  <meta name="description" data-i18n-content="metaDescription" content="Discover considered homes and property opportunities across Dubai with Helcoo Real Estate.">
   <meta name="robots" content="index, follow">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title data-i18n-title="pageTitle">Helcoo | Considered Dubai Real Estate</title>
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_AE">
   <meta property="og:site_name" content="Helcoo">
-  <meta property="og:title" content="Helcoo | Considered Dubai Real Estate" data-i18n-content="metaTitle">
-  <meta property="og:description" data-i18n-content="metaDescription"
-    content="Find a home that feels like yours. Explore considered properties across Dubai with Helcoo.">
-  <meta property="og:image"
-    content="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&h=630&q=85">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <meta property="og:title" content="Helcoo | Considered Dubai Real Estate" data-i18n-content="pageTitle">
+  <meta property="og:description" content="Discover considered homes and property opportunities across Dubai with Helcoo Real Estate." data-i18n-content="metaDescription">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=85">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/properties.js" defer></script>
+  <script src="js/search.js" defer></script>
+  <script src="js/favorites.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/script.js" defer></script>
 </head>
-
-<body>
+<body data-page="home" data-root="./">
   <a class="skip-link" href="#main-content" data-i18n="skipLink">Skip to content</a>
-  <div class="announcement"><span data-i18n="announcementTitle">YOUR DUBAI PROPERTY PARTNER</span><span
-      data-i18n="announcementText">Thoughtful guidance. Exceptional
-      places.</span></div>
+  <div class="announcement">
+    <span data-i18n="announcementTitle">YOUR DUBAI PROPERTY PARTNER</span>
+    <span data-i18n="announcementText">Thoughtful guidance. Exceptional places.</span>
+  </div>
   <header class="site-header">
     <div class="wrap nav-shell">
-      <a class="brand" href="#home" aria-label="Helcoo home" data-i18n-aria-label="brandLabel"><span
-          class="brand-mark">H</span><span>helcoo<span class="brand-period">.</span></span></a>
-      <button class="menu-toggle" type="button" aria-label="Open navigation" data-i18n-aria-label="openNavigation"
-        aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+      <a class="brand" href="index.html" aria-label="Helcoo home" data-i18n-aria-label="brandLabel">
+        <span class="brand-mark">H</span><span>helcoo<span class="brand-period">.</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" data-i18n-aria-label="openNavigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span>
+      </button>
       <nav class="nav-links" id="primary-nav" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
-        <a href="#properties" data-i18n="navBuy">Buy</a>
-        <a href="mailto:hello@helcoo.ae?subject=Rental%20enquiry" data-i18n="navRent">Rent</a>
-        <a href="#areas" data-i18n="navCommunities">Communities</a>
-        <a href="#about" data-i18n="navApproach">Our approach</a>
+        <a href="index.html" aria-current="page" data-i18n="navHome">Home</a>
+        <a href="pages/properties.html" data-i18n="navProperties">Properties</a>
+        <a href="pages/about.html" data-i18n="navAbout">About us</a>
+        <a href="pages/contact.html" data-i18n="navContact">Contact</a>
       </nav>
-      <div class="nav-actions"><label class="language-control"><span class="visually-hidden"
-            data-i18n="languageLabel">Language</span><select id="language-select" aria-label="Language"
-            data-i18n-aria-label="languageLabel">
+      <div class="nav-actions">
+        <label class="language-control">
+          <span class="visually-hidden" data-i18n="languageLabel">Language</span>
+          <select id="language-select" aria-label="Language" data-i18n-aria-label="languageLabel">
             <option value="en">English</option>
             <option value="ar">العربية</option>
-          </select></label><a class="nav-phone" href="tel:+97145550128">+971 4 555 0128</a><a
-          class="button button-dark button-small" href="mailto:hello@helcoo.ae?subject=Property%20enquiry"><span
-            data-i18n="speakToUs">Speak to us</span>
-          <span aria-hidden="true">↗</span></a></div>
+          </select>
+        </label>
+        <a class="nav-phone" href="tel:+97145550128" data-i18n="contactPhone">+971 4 555 0128</a>
+        <a class="button button-dark button-small" href="pages/contact.html"><span data-i18n="speakToUs">Speak to us</span><img src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"></a>
+      </div>
     </div>
   </header>
 
   <main id="main-content" tabindex="-1">
     <section class="hero wrap" id="home" aria-labelledby="hero-title">
-      <div class="hero-image" role="img" aria-label="Dubai skyline at golden hour" data-i18n-aria-label="heroImage">
-      </div>
+      <div class="hero-image" role="img" aria-label="Dubai skyline at golden hour" data-i18n-aria-label="heroImage"></div>
       <div class="hero-shade"></div>
       <div class="hero-content">
         <p class="eyebrow eyebrow-light" data-i18n="heroEyebrow">A MORE CONSIDERED WAY TO FIND HOME</p>
-        <h1 id="hero-title"><span data-i18n="heroTitle">Find your place</span><br><em data-i18n="heroTitleAccent">in
-            Dubai.</em></h1>
-        <p class="hero-copy" data-i18n="heroCopy">A home is more than an address. Discover exceptional spaces, local
-          perspective and guidance
-          that puts you first.</p>
-        <div class="hero-actions"><a class="button button-gold" href="#properties"><span
-              data-i18n="exploreProperties">Explore properties</span> <span aria-hidden="true">↗</span></a><a
-            class="hero-text-link" href="#about"><span data-i18n="heroAboutLink">Discover the Helcoo difference</span>
-            <span aria-hidden="true">→</span></a></div>
+        <h1 id="hero-title"><span data-i18n="heroTitle">Find your place</span><br><em data-i18n="heroTitleAccent">in Dubai.</em></h1>
+        <p class="hero-copy" data-i18n="heroCopy">A home is more than an address. Discover exceptional spaces, local perspective and guidance that puts you first.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="pages/properties.html"><span data-i18n="exploreProperties">Explore properties</span><img src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"></a>
+          <a class="hero-text-link" href="pages/about.html"><span data-i18n="heroAboutLink">Discover the Helcoo difference</span><span aria-hidden="true">→</span></a>
+        </div>
       </div>
-      <div class="hero-caption"><span data-i18n="heroCaptionLocation">01 / DUBAI, UNITED ARAB EMIRATES</span><span
-          data-i18n="heroCaptionCity">THE CITY, YOUR WAY</span></div>
+      <div class="hero-caption"><span data-i18n="heroCaptionLocation">DUBAI, UNITED ARAB EMIRATES</span><span data-i18n="heroCaptionCity">THE CITY, YOUR WAY</span></div>
     </section>
 
     <section class="search-section wrap" aria-label="Find a property" data-i18n-aria-label="searchLabel">
       <form class="search-panel" id="search-form">
-        <div class="search-intro"><span class="search-kicker" data-i18n="searchKicker">LET'S BEGIN</span><strong
-            data-i18n="searchTitle">Find your next address</strong>
+        <div class="search-intro">
+          <span class="search-kicker" data-i18n="searchKicker">LET’S BEGIN</span>
+          <strong data-i18n="searchTitle">Find your next address</strong>
         </div>
-        <div class="field"><label for="location" data-i18n="areaLabel">Preferred area</label><select id="location"
-            name="location">
+        <div class="field">
+          <label for="location" data-i18n="areaLabel">Preferred area</label>
+          <select id="location" name="location">
             <option value="all" data-i18n="allDubai">All Dubai</option>
             <option value="Dubai Marina" data-i18n="areaDubaiMarina">Dubai Marina</option>
             <option value="Downtown Dubai" data-i18n="areaDowntown">Downtown Dubai</option>
             <option value="Palm Jumeirah" data-i18n="areaPalm">Palm Jumeirah</option>
             <option value="Jumeirah" data-i18n="areaJumeirah">Jumeirah</option>
-          </select></div>
-        <div class="field"><label for="type" data-i18n="typeLabel">Property type</label><select id="type" name="type">
+          </select>
+        </div>
+        <div class="field">
+          <label for="type" data-i18n="typeLabel">Property type</label>
+          <select id="type" name="type">
             <option value="all" data-i18n="anyType">Any type</option>
             <option value="Apartment" data-i18n="apartment">Apartment</option>
             <option value="Villa" data-i18n="villa">Villa</option>
             <option value="Townhouse" data-i18n="townhouse">Townhouse</option>
-          </select></div>
-        <div class="field"><label for="budget" data-i18n="budgetLabel">Maximum budget</label><select id="budget"
-            name="budget">
+          </select>
+        </div>
+        <div class="field">
+          <label for="budget" data-i18n="budgetLabel">Maximum budget</label>
+          <select id="budget" name="budget">
             <option value="all" data-i18n="noMaximum">No maximum</option>
             <option value="2000000" data-i18n="budget2m">AED 2 million</option>
             <option value="4000000" data-i18n="budget4m">AED 4 million</option>
             <option value="6000000" data-i18n="budget6m">AED 6 million</option>
             <option value="10000000" data-i18n="budget10m">AED 10 million</option>
-          </select></div>
-        <button class="button button-dark search-button" type="submit"><span data-i18n="searchHomes">Search homes</span>
-          <span aria-hidden="true">→</span></button>
+          </select>
+        </div>
+        <button class="button button-dark search-button" type="submit">
+          <span data-i18n="searchHomes">Search homes</span>
+          <img src="assets/icons/search.svg" alt="" aria-hidden="true">
+        </button>
       </form>
     </section>
 
-    <section class="intro-strip wrap" aria-label="Helcoo service promise" data-i18n-aria-label="servicePromise"><span
-        data-i18n="localKnowledge">LOCAL KNOWLEDGE</span><i></i><span data-i18n="personalGuidance">PERSONAL
-        GUIDANCE</span><i></i><span data-i18n="selectedHomes">THOUGHTFULLY SELECTED HOMES</span><i></i><span
-        data-i18n="dubaiAlways">DUBAI, ALWAYS</span></section>
+    <section class="intro-strip wrap" aria-label="Helcoo service promise">
+      <span data-i18n="localKnowledge">LOCAL KNOWLEDGE</span><i></i>
+      <span data-i18n="personalGuidance">PERSONAL GUIDANCE</span><i></i>
+      <span data-i18n="selectedHomes">THOUGHTFULLY SELECTED HOMES</span><i></i>
+      <span data-i18n="dubaiAlways">DUBAI, ALWAYS</span>
+    </section>
 
     <section class="section wrap" id="properties">
       <div class="section-heading">
         <div>
           <p class="eyebrow" data-i18n="collectionEyebrow">THE HELCOO COLLECTION</p>
-          <h2><span data-i18n="collectionTitle">Places with a</span> <em data-i18n="collectionTitleAccent">point of
-              view.</em></h2>
-          <p class="section-description" data-i18n="collectionCopy">A selection of homes chosen for the way they feel,
-            the lives they make possible
-            and the details that make them special.</p>
-        </div><a class="underlined-link" href="mailto:hello@helcoo.ae?subject=Property%20search"><span
-            data-i18n="tailoredSearch">Request a tailored search</span> <span>↗</span></a>
+          <h2><span data-i18n="collectionTitle">Places with a</span> <em data-i18n="collectionTitleAccent">point of view.</em></h2>
+          <p class="section-description" data-i18n="collectionCopy">A selection of homes chosen for the way they feel, the lives they make possible and the details that make them special.</p>
+        </div>
+        <a class="underlined-link" href="pages/properties.html"><span data-i18n="viewAllProperties">View all properties</span><img src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"></a>
       </div>
       <div class="results-toolbar">
-        <p id="results-count" aria-live="polite">A selection of 4 homes</p><button class="reset-filters"
-          id="reset-filters" type="button"><span data-i18n="clearFilters">Clear filters</span> <span
-            aria-hidden="true">×</span></button>
+        <p id="results-count" aria-live="polite" data-i18n="resultsCountDefault">A selection of homes</p>
+        <p class="listing-disclaimer" data-i18n="listingDisclaimer">Illustrative listings only. Confirm availability, pricing and property details with Helcoo.</p>
       </div>
-      <p class="listing-disclaimer" data-i18n="listingDisclaimer">Illustrative listings only. Confirm availability,
-        pricing and property details with
-        Helcoo.</p>
-      <div class="property-grid" id="property-grid">
-        <article class="property-card" data-location="Dubai Marina" data-type="Apartment" data-price="2450000"
-          data-title="Marina Heights, a brighter view" data-title-ar="مارينا هايتس، إطلالة أكثر إشراقًا" data-beds="2"
-          data-baths="2" data-size="1,280"
-          data-description="A light-filled apartment with a calm outlook over the water and the energy of Dubai Marina close by."
-          data-description-ar="شقة مشرقة بإطلالة هادئة على المياه، وعلى مقربة من أجواء دبي مارينا النابضة بالحياة.">
-          <div class="property-image"><img src="assets/images/properties/property-1.jpg"
-              alt="Bright, contemporary apartment interior" data-i18n-alt="marinaImageAlt" width="1000" height="667"
-              loading="lazy" decoding="async"><span class="property-tag" data-i18n="justListed">JUST
-              LISTED</span><button class="heart" type="button" aria-label="Save Marina Heights apartment"
-              data-i18n-aria-label="saveMarina" aria-pressed="false">♡</button><span class="image-index">01 /
-              04</span></div>
-          <div class="property-info">
-            <div class="property-location"><span data-i18n="apartmentCaps">APARTMENT</span><span
-                aria-hidden="true">·</span><span data-i18n="areaDubaiMarinaCaps">DUBAI MARINA</span></div>
-            <h3 data-i18n="marinaTitle">Marina Heights, a brighter view</h3>
-            <p class="property-sub" data-i18n="marinaSubtitle">A calm corner above the water</p>
-            <div class="property-meta"><span data-stat="beds">2 beds</span><span data-stat="baths">2 baths</span><span
-                data-stat="size">1,280 sq ft</span></div>
-            <div class="property-bottom"><span class="price">AED 2,450,000</span><button class="details-button"
-                type="button" aria-label="View details for Marina Heights, a brighter view"
-                data-i18n-aria-label="viewMarina"><span data-i18n="viewDetails">View details</span> <span
-                  aria-hidden="true">↗</span></button></div>
-          </div>
-        </article>
-        <article class="property-card" data-location="Downtown Dubai" data-type="Apartment" data-price="3850000"
-          data-title="Opera District, all in the detail" data-title-ar="حي الأوبرا، أناقة في كل التفاصيل" data-beds="2"
-          data-baths="2" data-size="1,550"
-          data-description="A refined city residence in the heart of Downtown Dubai, with generous living spaces and an address close to the city's landmarks."
-          data-description-ar="مسكن راقٍ في قلب داون تاون دبي، بمساحات رحبة وموقع قريب من أبرز معالم المدينة.">
-          <div class="property-image"><img src="assets/images/properties/property-2.jpg"
-              alt="Elegant modern apartment living space" data-i18n-alt="downtownImageAlt" width="1000" height="667"
-              loading="lazy" decoding="async"><span class="property-tag" data-i18n="featured">FEATURED</span><button
-              class="heart" type="button" aria-label="Save Opera District apartment" data-i18n-aria-label="saveDowntown"
-              aria-pressed="false">♡</button><span class="image-index">02 /
-              04</span></div>
-          <div class="property-info">
-            <div class="property-location"><span data-i18n="apartmentCaps">APARTMENT</span><span
-                aria-hidden="true">·</span><span data-i18n="areaDowntownCaps">DOWNTOWN DUBAI</span></div>
-            <h3 data-i18n="downtownTitle">Opera District, all in the detail</h3>
-            <p class="property-sub" data-i18n="downtownSubtitle">City living, with room to exhale</p>
-            <div class="property-meta"><span data-stat="beds">2 beds</span><span data-stat="baths">2 baths</span><span
-                data-stat="size">1,550 sq ft</span></div>
-            <div class="property-bottom"><span class="price">AED 3,850,000</span><button class="details-button"
-                type="button" aria-label="View details for Opera District, all in the detail"
-                data-i18n-aria-label="viewDowntown"><span data-i18n="viewDetails">View details</span> <span
-                  aria-hidden="true">↗</span></button></div>
-          </div>
-        </article>
-        <article class="property-card" data-location="Palm Jumeirah" data-type="Villa" data-price="8900000"
-          data-title="A little more space by the sea" data-title-ar="مساحة أوسع قليلًا بجانب البحر" data-beds="4"
-          data-baths="4" data-size="3,200"
-          data-description="A spacious villa-inspired retreat with room to unwind, entertain and enjoy a slower pace by the sea."
-          data-description-ar="ملاذ واسع بطابع الفيلا، يوفر مساحة للاسترخاء واستقبال الضيوف والاستمتاع بإيقاع حياة أكثر هدوءًا بجانب البحر.">
-          <div class="property-image"><img src="assets/images/properties/property-3.jpg"
-              alt="Luxury villa interior with natural finishes" data-i18n-alt="palmImageAlt" width="1000" height="667"
-              loading="lazy" decoding="async"><span class="property-tag" data-i18n="rareFind">RARE FIND</span><button
-              class="heart" type="button" aria-label="Save Palm Jumeirah villa" data-i18n-aria-label="savePalm"
-              aria-pressed="false">♡</button><span class="image-index">03 /
-              04</span></div>
-          <div class="property-info">
-            <div class="property-location"><span data-i18n="villaCaps">VILLA</span><span
-                aria-hidden="true">·</span><span data-i18n="areaPalmCaps">PALM JUMEIRAH</span>
-            </div>
-            <h3 data-i18n="palmTitle">A little more space by the sea</h3>
-            <p class="property-sub" data-i18n="palmSubtitle">A private garden, a slower morning</p>
-            <div class="property-meta"><span data-stat="beds">4 beds</span><span data-stat="baths">4 baths</span><span
-                data-stat="size">3,200 sq ft</span></div>
-            <div class="property-bottom"><span class="price">AED 8,900,000</span><button class="details-button"
-                type="button" aria-label="View details for A little more space by the sea"
-                data-i18n-aria-label="viewPalm"><span data-i18n="viewDetails">View details</span> <span
-                  aria-hidden="true">↗</span></button></div>
-          </div>
-        </article>
-        <article class="property-card" data-location="Jumeirah" data-type="Townhouse" data-price="3250000"
-          data-title="Courtyard House, Jumeirah" data-title-ar="منزل الفناء، جميرا" data-beds="3" data-baths="3"
-          data-size="1,900"
-          data-description="A welcoming townhouse with a quiet, residential feel, a private courtyard and the coast within easy reach."
-          data-description-ar="منزل تاون هاوس بأجواء سكنية هادئة وفناء خاص، وعلى مسافة قريبة من الساحل.">
-          <div class="property-image"><img src="assets/images/properties/property-2.jpg"
-              alt="Warm contemporary townhouse interior" data-i18n-alt="jumeirahImageAlt" width="1000" height="667"
-              loading="lazy" decoding="async"><span class="property-tag" data-i18n="newToMarket">NEW TO
-              MARKET</span><button class="heart" type="button" aria-label="Save Jumeirah townhouse"
-              data-i18n-aria-label="saveJumeirah" aria-pressed="false">♡</button><span class="image-index">04 /
-              04</span></div>
-          <div class="property-info">
-            <div class="property-location"><span data-i18n="townhouseCaps">TOWNHOUSE</span><span
-                aria-hidden="true">·</span><span data-i18n="areaJumeirahCaps">JUMEIRAH</span>
-            </div>
-            <h3 data-i18n="jumeirahTitle">Courtyard House, Jumeirah</h3>
-            <p class="property-sub" data-i18n="jumeirahSubtitle">A quiet retreat close to the coast</p>
-            <div class="property-meta"><span data-stat="beds">3 beds</span><span data-stat="baths">3 baths</span><span
-                data-stat="size">1,900 sq ft</span></div>
-            <div class="property-bottom"><span class="price">AED 3,250,000</span><button class="details-button"
-                type="button" aria-label="View details for Courtyard House, Jumeirah"
-                data-i18n-aria-label="viewJumeirah"><span data-i18n="viewDetails">View details</span> <span
-                  aria-hidden="true">↗</span></button></div>
-          </div>
-        </article>
-      </div>
-      <div class="empty-state" id="empty-state" hidden><span class="empty-icon">⌕</span>
-        <h3 data-i18n="emptyTitle">No matching homes just yet</h3>
-        <p data-i18n="emptyCopy">Try another area or budget, or let our team help you find the right property.</p><a
-          class="button button-dark" href="mailto:hello@helcoo.ae?subject=Tailored%20property%20search"
-          data-i18n="emptyLink">Ask Helcoo to help</a>
-      </div>
+      <div class="property-grid" id="property-grid"></div>
     </section>
 
-    <section class="areas-section" id="areas">
-      <div class="wrap">
-        <div class="section-heading area-heading">
-          <div>
-            <p class="eyebrow" data-i18n="areasEyebrow">FIND YOUR NEIGHBOURHOOD</p>
-            <h2><span data-i18n="areasTitle">Dubai, in</span> <em data-i18n="areasTitleAccent">many different ways.</em>
-            </h2>
-          </div>
-          <p class="section-description" data-i18n="areasCopy">From the pulse of the city to the quiet of the coast,
-            every neighbourhood has
-            its own character. Find the one that feels like you.</p>
+    <section class="section wrap areas-section" id="areas">
+      <div class="section-heading area-heading">
+        <div>
+          <p class="eyebrow" data-i18n="areasEyebrow">FIND YOUR NEIGHBOURHOOD</p>
+          <h2><span data-i18n="areasTitle">Dubai,</span> <em data-i18n="areasTitleAccent">many ways to live.</em></h2>
+          <p class="section-description" data-i18n="areasCopy">From the pulse of the city to the calm of the coast, every neighbourhood has its own character.</p>
         </div>
-        <div class="area-grid">
-          <button class="area-card area-downtown" type="button" data-area="Downtown Dubai"><span
-              class="area-number">01</span><span class="area-copy"><strong data-i18n="areaDowntown">Downtown
-                Dubai</strong><small data-i18n="downtownTagline">THE HEART OF THE CITY</small></span><span
-              class="area-arrow">↗</span></button>
-          <button class="area-card area-palm" type="button" data-area="Palm Jumeirah"><span
-              class="area-number">02</span><span class="area-copy"><strong data-i18n="areaPalm">Palm
-                Jumeirah</strong><small data-i18n="palmTagline">LIFE BY THE WATER</small></span><span
-              class="area-arrow">↗</span></button>
-          <button class="area-card area-marina" type="button" data-area="Dubai Marina"><span
-              class="area-number">03</span><span class="area-copy"><strong data-i18n="areaDubaiMarina">Dubai
-                Marina</strong><small data-i18n="marinaTagline">A VIEW AROUND EVERY CORNER</small></span><span
-              class="area-arrow">↗</span></button>
-          <button class="area-card area-jumeirah" type="button" data-area="Jumeirah"><span
-              class="area-number">04</span><span class="area-copy"><strong
-                data-i18n="areaJumeirah">Jumeirah</strong><small data-i18n="jumeirahTagline">ROOM TO SLOW
-                DOWN</small></span><span class="area-arrow">↗</span></button>
-        </div>
+      </div>
+      <div class="area-grid">
+        <a class="area-card area-downtown reveal" href="pages/properties.html?location=Downtown%20Dubai">
+          <span class="area-number">01 / DOWNTOWN</span><span class="area-copy"><strong data-i18n="areaDowntown">Downtown Dubai</strong><small data-i18n="downtownTagline">The heart of the city</small></span><span class="area-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="area-card area-palm reveal" href="pages/properties.html?location=Palm%20Jumeirah">
+          <span class="area-number">02 / THE PALM</span><span class="area-copy"><strong data-i18n="areaPalm">Palm Jumeirah</strong><small data-i18n="palmTagline">Life beside the water</small></span><span class="area-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="area-card area-marina reveal" href="pages/properties.html?location=Dubai%20Marina">
+          <span class="area-number">03 / THE MARINA</span><span class="area-copy"><strong data-i18n="areaDubaiMarina">Dubai Marina</strong><small data-i18n="marinaTagline">A view around every corner</small></span><span class="area-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="area-card area-jumeirah reveal" href="pages/properties.html?location=Jumeirah">
+          <span class="area-number">04 / JUMEIRAH</span><span class="area-copy"><strong data-i18n="areaJumeirah">Jumeirah</strong><small data-i18n="jumeirahTagline">Room for a slower pace</small></span><span class="area-arrow" aria-hidden="true">↗</span>
+        </a>
       </div>
     </section>
 
     <section class="editorial-section wrap" id="about">
-      <div class="editorial-image" role="img" aria-label="Warm, sunlit contemporary living room"
-        data-i18n-aria-label="editorialImage"><span data-i18n="editorialImageCaption">THE HELCOO
-          APPROACH</span></div>
-      <div class="editorial-copy">
+      <div class="editorial-image reveal">
+        <span data-i18n="editorialImageCaption">THE HELCOO APPROACH</span>
+      </div>
+      <div class="editorial-copy reveal">
         <p class="eyebrow" data-i18n="editorialEyebrow">MORE THAN A PROPERTY SEARCH</p>
-        <h2><span data-i18n="editorialTitle">Good advice makes</span><br><em data-i18n="editorialTitleAccent">all the
-            difference.</em></h2>
-        <p data-i18n="editorialCopy">Moving, investing, or simply wondering what’s next? Our approach begins with
-          listening. We bring local
-          knowledge, considered options and honest guidance to every step.</p><a class="underlined-link"
-          href="mailto:hello@helcoo.ae?subject=Meet%20Helcoo"><span data-i18n="getToKnow">Get to know us</span>
-          <span>↗</span></a>
-        <div class="editorial-signature" data-i18n="editorialSignature">Your next chapter, thoughtfully found.</div>
+        <h2><span data-i18n="editorialTitle">Good advice makes</span> <em data-i18n="editorialTitleAccent">all the difference.</em></h2>
+        <p data-i18n="editorialCopy">Whether you are moving, investing or considering what comes next, we start by listening. Expect local knowledge, thoughtful options and honest guidance at every step.</p>
+        <a class="underlined-link" href="pages/about.html"><span data-i18n="getToKnow">Get to know us</span><img src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"></a>
+        <span class="editorial-signature" data-i18n="editorialSignature">Your next chapter, found with care.</span>
       </div>
     </section>
 
     <section class="contact-band">
       <div class="wrap contact-inner">
         <div>
-          <p class="eyebrow eyebrow-light" data-i18n="contactEyebrow">WHEN YOU'RE READY</p>
-          <h2><span data-i18n="contactTitle">Let's find a place</span><br><em data-i18n="contactTitleAccent">to call
-              yours.</em></h2>
+          <p class="eyebrow eyebrow-light" data-i18n="contactEyebrow">WHEN YOU’RE READY</p>
+          <h2><span data-i18n="contactTitle">Let’s find a place</span><br><em data-i18n="contactTitleAccent">to call home.</em></h2>
         </div>
         <div class="contact-side">
-          <p data-i18n="contactCopy">Tell us what you're looking for. We'll bring the local insight and personal
-            attention to help you take the
-            next step.</p><a class="button button-gold"
-            href="mailto:hello@helcoo.ae?subject=Start%20a%20property%20conversation"><span
-              data-i18n="startConversation">Start a conversation</span>
-            <span>↗</span></a>
+          <p data-i18n="contactCopy">Tell us what you are looking for. We will bring local expertise and personal attention to your next step.</p>
+          <a class="button button-gold" href="pages/contact.html"><span data-i18n="startConversation">Start a conversation</span><img src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"></a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-main">
-        <div class="footer-brand"><a class="brand brand-footer" href="#home"><span
-              class="brand-mark">H</span><span>helcoo<span class="brand-period">.</span></span></a>
-          <p data-i18n="footerBrandCopy">Considered homes. Thoughtful guidance. A better way to find your place in
-            Dubai.</p>
-        </div>
-        <div class="footer-col">
-          <h4 data-i18n="footerExplore">EXPLORE</h4><a href="#properties" data-i18n="footerBuy">Buy a home</a><a
-            href="mailto:hello@helcoo.ae?subject=Rental%20enquiry" data-i18n="footerRent">Rental enquiries</a><a
-            href="#areas" data-i18n="footerCommunities">Dubai communities</a>
-        </div>
-        <div class="footer-col">
-          <h4>HELCOO</h4><a href="#about" data-i18n="footerApproach">Our approach</a><a href="mailto:hello@helcoo.ae"
-            data-i18n="footerContact">Get in touch</a><a href="tel:+97145550128">+971 4 555 0128</a>
-        </div>
-        <div class="footer-col">
-          <h4 data-i18n="footerFindUs">FIND US</h4><span data-i18n="officeAddress">Office 204, Gate Avenue</span><span
-            data-i18n="officeArea">Dubai International Financial Centre</span><span data-i18n="officeCity">Dubai, United
-            Arab Emirates</span>
-        </div>
+    <div class="wrap footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Helcoo home" data-i18n-aria-label="brandLabel"><span class="brand-mark">H</span><span>helcoo<span class="brand-period">.</span></span></a>
+        <p data-i18n="footerBrandCopy">Thoughtful guidance. Exceptional places. A more personal way to find your place in Dubai.</p>
       </div>
-      <div class="footer-bottom"><span>© <span id="year"></span> <span data-i18n="copyright">Helcoo Real Estate. All
-            rights reserved.</span></span><span data-i18n="footerMotto">MADE FOR LIFE IN DUBAI&nbsp; · &nbsp;<a
-            href="mailto:hello@helcoo.ae?subject=Privacy%20enquiry" data-i18n="privacyLink">Privacy enquiries</a></span>
+      <div class="footer-col">
+        <h4 data-i18n="footerExplore">Explore</h4>
+        <a href="pages/properties.html" data-i18n="navProperties">Properties</a>
+        <a href="pages/about.html" data-i18n="navAbout">About us</a>
+        <a href="pages/contact.html" data-i18n="navContact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footerContact">Contact</h4>
+        <a href="mailto:hello@helcoo.ae" data-i18n="contactEmail">hello@helcoo.ae</a>
+        <a href="tel:+97145550128" data-i18n="contactPhone">+971 4 555 0128</a>
+        <span data-i18n="officeArea">Dubai International Financial Centre</span>
       </div>
     </div>
+    <div class="wrap footer-bottom">
+      <span>© <span data-year></span> <span data-i18n="copyright">Helcoo Real Estate. All rights reserved.</span></span>
+      <span data-i18n="footerMotto">Made for a life in Dubai.</span>
+    </div>
   </footer>
-
-  <dialog class="property-dialog" id="property-dialog" aria-labelledby="dialog-title"
-    aria-describedby="dialog-description"><button class="dialog-close" type="button" aria-label="Close property details"
-      data-i18n-aria-label="closeDetails">×</button>
-    <p class="eyebrow" data-i18n="closerLook">A CLOSER LOOK</p>
-    <h2 id="dialog-title"></h2>
-    <p class="dialog-location" id="dialog-location"></p>
-    <p class="dialog-description" id="dialog-description"></p>
-    <div class="dialog-stats" id="dialog-stats"></div>
-    <p class="dialog-price" id="dialog-price"></p><a class="button button-dark" id="dialog-enquire"
-      href="mailto:hello@helcoo.ae"><span data-i18n="enquireHome">Enquire about this home</span> <span
-        aria-hidden="true">↗</span></a>
-  </dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
-
 </html>
