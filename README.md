@@ -9,10 +9,22 @@ Open `index.html` in a browser or serve the `real_estate-website` folder with VS
 ## Included
 
 - Responsive property search and community filters.
+- English and Arabic language switching with right-to-left layout support.
 - Property detail dialogs, accessible keyboard navigation and a mobile menu.
 - Optional browser-local favourites; saved homes are not sent to Helcoo.
 - Responsive layouts, reduced-motion support, page metadata and lazy-loaded listing images.
 - Contact links that open the visitor's email or phone app.
+
+## Assets
+
+Page imagery is stored locally under `assets/images/`:
+
+- `hero/dubai-skyline.jpg` — hero and Downtown Dubai community tile
+- `properties/property-1.jpg` through `property-3.jpg` — listing photos; the fourth listing reuses `property-2.jpg`
+- `locations/dubai-marina.jpg` and `locations/palm-jumeirah.jpg` — community tiles
+- `editorial/approach.jpg` — Helcoo approach section
+
+Replace the example stock photos with images you have permission to publish before launch.
 
 ## Required before launch
 
@@ -29,3 +41,4 @@ This project is a front-end starter, not a complete live listings or lead-manage
 - `index.html` — page structure, metadata and illustrative listings
 - `styles.css` — responsive visual system
 - `script.js` — client-side filters, favourites, navigation and property dialogs
+- `assets/images/` — local page imagery
